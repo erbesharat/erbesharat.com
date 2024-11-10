@@ -1,0 +1,149 @@
+module:
+  imports:
+    - path: github.com/CaiJimmy/hugo-theme-stack/v3
+
+baseurl: https://erbesharat.nl
+languageCode: en-us
+theme: hugo-theme-stack
+title: Erfan Besharat
+copyright: "Erfan Besharat"
+
+DefaultContentLanguage: en
+
+hasCJKLanguage: false
+
+languages:
+    en:
+        languageName: English
+        title: Erfan Besharat
+        weight: 1
+        params:
+            sidebar:
+                subtitle: Software Engineer and Open Source Enthusiast
+    fa:
+        languageName: فارسی
+        languagedirection: rtl
+        title: عرفان بشارت | مهندس نرم افزار
+        weight: 2
+        params:
+            sidebar:
+                subtitle: مهندس نرم افزار و فعال حوزه نرم افزار آزاد
+
+services:
+    disqus:
+        shortname: "erbesharat"
+    googleAnalytics:
+        id:
+
+pagination:
+    pagerSize: 3
+
+permalinks:
+    post: /p/:slug/
+    page: /:slug/
+
+params:
+    mainSections:
+        - post
+    featuredImageField: image
+    rssFullContent: true
+    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+
+    footer:
+        since: 2023
+        customText:
+
+    dateFormat:
+        published: Jan 02, 2006
+        lastUpdated: Jan 02, 2006 15:04 MST
+
+    sidebar:
+        emoji: 🍃
+        subtitle: Software Engineer and Open Source Enthusiast
+        avatar:
+            enabled: true
+            local: true
+            src: img/avatar.jpg
+
+    article:
+        math: false
+        toc: true
+        readingTime: true
+        license:
+            enabled: true
+            default: Licensed under CC BY-NC-SA 4.0
+
+    comments:
+        enabled: true
+        provider: disqus
+    widgets:
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
+
+    opengraph:
+        twitter:
+            # Your Twitter username
+            site: erbesharat
+
+            # Available values: summary, summary_large_image
+            card: summary_large_image
+
+    defaultImage:
+        opengraph:
+            enabled: false
+            local: false
+            src:
+
+    colorScheme:
+        # Display toggle
+        toggle: true
+
+        # Available values: auto, light, dark
+        default: auto
+
+    imageProcessing:
+        cover:
+            enabled: true
+        content:
+            enabled: true
+
+### Custom menu
+### See https://stack.jimmycai.com/config/menu
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+menu:
+    main: []
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/erbesharat
+          params:
+              icon: brand-github
+
+        - identifier: twitter
+          name: Twitter
+          url: https://twitter.com/erbesharat
+          params:
+              icon: brand-twitter
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
